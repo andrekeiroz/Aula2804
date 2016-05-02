@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Valores implements ValoresITF{
 	List<Integer> lista = new ArrayList<Integer>();
+	
 	@Override
 	public boolean ins(int v) {		
 		if(lista.size() < 10){
@@ -12,6 +13,10 @@ public class Valores implements ValoresITF{
 			return true;
 		}
 		return false;
+	}
+
+	public List<Integer> getLista() {
+		return lista;
 	}
 
 	@Override
@@ -35,7 +40,7 @@ public class Valores implements ValoresITF{
 		for(int i = 0; i < lista.size(); i++){
 			soma += lista.get(i);
 		}
-		return soma / lista.size();
+		return (double)soma / (double)lista.size();
 	}
 
 	@Override
